@@ -4,6 +4,7 @@ function createId(data) {
     if (newId === NaN || newId < 0 || newId === undefined) {
         console.error(`ID inválido`)
     }
+    return newId;
 }
 
 function findById(data, recordId) {

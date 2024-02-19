@@ -22,8 +22,8 @@ router.post(`/`, async (req, res, next) => {
         const newId = createId(envelopes);
         const newEnvelope = {
             id: newId,
-            title: title,
-            budget: budget,
+            title,
+            budget,
         };
         envelopes.push(newEnvelope);
         res.status(201).send(newEnvelope);
@@ -99,3 +99,5 @@ router.post(`/:fromId/transfer/:toId`, async (req, res, next) => {
         res.status(500).send(error);
     }
 });
+
+module.exports = router;
